@@ -8,6 +8,7 @@
 
 ## 调用方法
 请先配置`DOWNLOAD_PATH`与`WEBSITE`。
+
 并在插件目录下创建`audio`文件夹。
 ```
 /otto 活字印刷文本 是否使用原声大碟
