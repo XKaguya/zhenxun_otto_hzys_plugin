@@ -1,0 +1,2 @@
+# zhenxun_otto_hzys_plugin
+真寻电棍活字印刷术插件
