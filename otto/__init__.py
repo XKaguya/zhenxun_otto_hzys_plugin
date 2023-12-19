@@ -8,7 +8,6 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment
 from nonebot.adapters.onebot.v11.event import Event
 from nonebot.log import logger
 from .utils import otto as OTTO
-from LogAnalyze import log_analyze
 from configs.config import Config
 import os
 import json
@@ -37,10 +36,6 @@ Config.add_plugin_config("Otto", "Download_Path", None, help_="存放下载的�
 Config.add_plugin_config("Otto", "Website", "https://otto-hzys.hanayabuki.cf", help_="从哪里活字印刷")
 
 json_path = Path(__file__).resolve().parent / "isblocked.json"
-
-folder_path = Path("G:/PaoPao/PaoPao/log")
-lines_to_read = 12
-font_path = Path(__file__).parent / "msyh.ttc"
 
 otto = on_command("otto", priority=5, block=True)
 @otto.handle()
