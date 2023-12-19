@@ -1,12 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-import time
 import os
 from nonebot.log import logger
 import shutil
 import asyncio
-import subprocess
 
 async def generate_otto(driver, text, original_disk_mode, path):
 	textarea = driver.find_element(By.XPATH, '//textarea[@class="el-textarea__inner"]')
@@ -67,25 +65,5 @@ async def call_otto(text, ysdd, path, website):
 	
 	first_file = await generate_otto(driver, text, ysdd, path)
 	logger.info(f"Executed. File: {first_file}")
-	
-	mp3_file_path = await convert_and_send(first_file)
-	return mp3_file_path
+	return first_file
 
-async def convert_to_mp3(input_file, output_file):
-	try:
-		subprocess.run(['ffmpeg', '-i', input_file, '-codec:a', 'libmp3lame', '-q:a', '2', output_file], check=True)
-		os.remove(input_file)
-		return output_file
-	except subprocess.CalledProcessError as e:
-		logger.error(f"FFmpeg error: {e}")
-		return None
-
-async def convert_and_send(file_path):
-	mp3_file_path = file_path.replace('.wav', '.mp3')
-	conversion_success = await convert_to_mp3(file_path, mp3_file_path)
-	
-	if conversion_success:
-		logger.info("Convert success.")
-	else:
-		logger.error("Conversion to MP3 failed.")
-	return mp3_file_path
