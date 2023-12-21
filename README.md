@@ -2,6 +2,18 @@
 
 该项目是基于 [大电老师活字印刷 otto-hzys](https://github.com/HanaYabuki/otto-hzys) 数据源，提供活字印刷功能的插件。支持本地部署和爬虫。
 
+## 安装步骤
+
+1. 首先直接clone整个仓库，提取出来otto文件夹。
+
+2. 将插件放入`extensive_plugin`文件夹。
+ 
+3. 在插件文件夹`otto`下创建`audio`文件夹。
+
+最终文件结构应与图相似。
+![image](https://github.com/XKaguya/zhenxun_otto_hzys_plugin/assets/96401952/562db9ff-9fe8-400d-a12e-3df5e222d00c)
+
+
 ## 使用方法
 
 1. 首先，在配置文件中设置以下参数：
