@@ -1,37 +1,35 @@
-# zhenxun_otto_hzys_plugin
-真寻电棍活字印刷术插件
+# 真寻电棍活字印刷术插件
 
-数据源：
-[大电老师活字印刷 otto-hzys](https://github.com/HanaYabuki/otto-hzys)
+该项目基于 [大电老师活字印刷 otto-hzys](https://github.com/HanaYabuki/otto-hzys) 数据源，提供活字印刷功能的插件。支持本地部署和爬虫功能。
 
-支持本地部署以及爬虫。
+## 使用方法
 
-## 调用方法
-请先配置`DOWNLOAD_PATH`与`WEBSITE`。
+1. 首先，在配置文件中设置以下参数：
+```
+DOWNLOAD_PATH: # 存放下载的音频文件的文件夹
+WEBSITE: https://otto-hzys.hanayabuki.cf # 从哪里活字印刷
+```
 
-并在插件目录下创建`audio`文件夹。
-```
-/otto 活字印刷文本 是否使用原声大碟
-```
-如：
-```
-/otto 我阐述你的梦
-```
-是原声大碟。
-```
-/otto 我阐述你的梦 False/false
-```
-则是活字印刷。
+2. 在插件目录下创建`audio`文件夹。
 
+3. 使用以下命令调用插件：
+    ```
+    /otto 活字印刷文本 是否使用原声大碟
+    ```
+    例如：
+    - `/otto 我阐述你的梦` ----> 使用原声大碟。
+    - `/otto 我阐述你的梦 False/false` ----> 不使用原声大碟。
+
+注意：执行速度慢是因为使用了无头浏览器，因本人的愚笨暂时没有更快的方法。
 
 ## 配置
-```
-Otto:
-# OTTO活字印刷术
-# DOWNLOAD_PATH: 存放下载的音频文件的文件夹
-# WEBSITE: 从哪里活字印刷
-DOWNLOAD_PATH: 
-WEBSITE: https://otto-hzys.hanayabuki.cf
-```
 
-执行速度慢是因为用了无头浏览器，个人没有想法还怎么更快。
+参数：
+
+- `DOWNLOAD_PATH`: 存放下载的音频文件的文件夹路径。
+- `WEBSITE`: 活字印刷数据源的网址。
+
+## 贡献
+
+欢迎贡献代码、提出问题或建议。如果你有任何问题，请提出 issue。
+
