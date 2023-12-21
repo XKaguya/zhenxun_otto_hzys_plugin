@@ -11,6 +11,7 @@
 3. 在插件文件夹`otto`下创建`audio`文件夹。
 
 最终文件结构应与图相似。
+
 ![image](https://github.com/XKaguya/zhenxun_otto_hzys_plugin/assets/96401952/562db9ff-9fe8-400d-a12e-3df5e222d00c)
 
 
