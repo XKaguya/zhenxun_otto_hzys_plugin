@@ -1,6 +1,6 @@
 # 真寻电棍活字印刷术插件
 
-该项目基于 [大电老师活字印刷 otto-hzys](https://github.com/HanaYabuki/otto-hzys) 数据源，提供活字印刷功能的插件。支持本地部署和爬虫功能。
+该项目是基于 [大电老师活字印刷 otto-hzys](https://github.com/HanaYabuki/otto-hzys) 数据源，提供活字印刷功能的插件。支持本地部署和爬虫。
 
 ## 使用方法
 
